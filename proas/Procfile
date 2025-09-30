@@ -1,2 +1,2 @@
 
-web: gunicorn proas.wsgi:application
+web: gunicorn assgin.wsgi:application
