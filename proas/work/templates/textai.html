@@ -1,0 +1,22 @@
+
+{% extends 'home.html'%}
+
+{% block show %} 
+
+<div class="textai">
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <input type="text" name="name" id="name" placeholder="Enter the text">
+        <button type="submit">Search</button>
+
+    </form>
+
+    <h1>Result</h1> <br>
+<div class="ans">
+    <p class="see">{{ result }}</p>
+    </div>
+    </div> 
+{%  endblock %}

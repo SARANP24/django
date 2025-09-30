@@ -1,0 +1,29 @@
+{% extends 'home.html'%}
+
+{%block show%} 
+
+<div class="pg_mail">
+    <div class="message1">
+    <p>{{ message }}</p>
+    </div>
+
+    <form method="post" >
+        {% csrf_token %}
+        <label for="subject">S U B J E C T :</label> <br>
+        <input type="text" name="subject" id="subject" required placeholder="Enter Your Subject"> <br>
+
+        <label for="message">M E S S A G E :</label> <br>
+        <textarea name="message" id="message"  placeholder="Enter message Here"  required></textarea> <br>
+
+        <label for="fromaddress">F R O M - A D D R E S S :</label> <br>
+        <input type="text" name="fromaddress" id="fromaddress" placeholder="From Address" required>   <br>
+
+        <label for="toaddress">T O - A D D R E S S :</label> <br>
+        <textarea name="toaddress" id="toaddress" placeholder="To Addreess" required></textarea> <br>
+
+        <button type="submit">Send Mail</button>
+
+    </form>
+    
+    </div>
+{% endblock %}
